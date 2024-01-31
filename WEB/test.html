@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCALE</title>
+  <style>
+    body {
+        margin:0;
+        padding:0;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        min-height: 100vh;
+        font-family: 'Jost',sans-serif;
+        background:linear-gradient(to bottom,#0f0c29,#2b5e63,#243c3e)
+    }
+    .ip{
+        height:40px;
+        margin:10px auto;
+        justify-content: center;
+        display: block;;
+        color:rgb(0, 0, 0);
+        background:#bbeff4;
+        font-size: 1em;
+        font-weight:bold;
+        margin-top: 20px;
+        outline:none;
+        border:none;
+        border-radius:5px;
+    }
+    #sub
+        {
+	        background-color:rgb(254, 255, 255) ;
+            margin-left: 220px;
+	        font-weight:900;
+	        font-size:20px;
+	        border-radius:20px;
+	        border-color:rgb(76, 149, 143);
+	        border-width: 6px;
+	        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+  </style>
+</head>
+<body>
+<table>
+<tr>
+    <td>
+        <img src="SCALE(IMG).jpg" height="300px" width="500px">
+    </td>
+</tr>    
+<tr>
+<td>
+  <div id="search-container">
+    <form id="search-form">
+      <input type="text" id="search-input" name="q" placeholder="Search your query.." autocomplete="off" autofocus size="50px" class="ip">
+      <button type="submit" id="sub">></button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('search-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      var userInput = document.getElementById('search-input').value;
+
+      // Redirect to the result page with the search query as a parameter
+      window.location.href = `result.html?q=${userInput}`;
+    });
+  </script>
+</td>  
+</tr>
+</table>
+</body>
+</html>
